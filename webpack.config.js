@@ -44,7 +44,7 @@ module.exports = {
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        colorPicker: "mf_colorPicker@https://color-picker-mf.netlify.app/",
+        colorPicker: "mf_colorPicker@https://color-picker-mf.netlify.app",
         colorList: "mf_colorList@https://colorlist-mf.netlify.app/",
       },
       exposes: {},
