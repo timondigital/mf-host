@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "https://host-mf-colorpicker.netlify.app/",
   },
 
   resolve: {
@@ -44,8 +44,8 @@ module.exports = {
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        colorPicker: "mf_colorPicker@http://localhost:3001/remoteEntry.js",
-        colorList: "mf_colorList@http://localhost:3002/remoteEntry.js",
+        colorPicker: "mf_colorPicker@https://color-picker-mf.netlify.app/",
+        colorList: "mf_colorList@https://colorlist-mf.netlify.app/",
       },
       exposes: {},
       shared: {
