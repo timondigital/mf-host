@@ -49,9 +49,13 @@ module.exports = (_, argv) => {
         filename: "remoteEntry.js",
         remotes: {
           colorPicker:
-            "mf_colorPicker@https://color-picker-mf.netlify.app/remoteEntry.js",
+            argv.mode === "development"
+              ? "mf_colorPicker@http://localhost:3001/remoteEntry.js"
+              : "mf_colorPicker@https://color-picker-mf.netlify.app/remoteEntry.js",
           colorList:
-            "mf_colorList@https://colorlist-mf.netlify.app/remoteEntry.js",
+            argv.mode === "development"
+              ? "mf_colorList@http://localhost:3002/remoteEntry.js"
+              : "mf_colorList@https://colorlist-mf.netlify.app/remoteEntry.js",
         },
         exposes: {},
         shared: {
